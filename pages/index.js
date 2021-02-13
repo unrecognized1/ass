@@ -1,0 +1,34 @@
+import Layout from '../components/Layout'
+import Users from '../components/Users'
+import axios from 'axios'
+axios.defaults.withCredentials = true;
+const Index = (props)=>(
+<Layout title="home" description="Home compon">
+	<div>
+		
+		<div>
+		<Users data={props} />
+
+
+{/*			{props[1]['name']}	This is home*/}
+		</div>
+	</div>
+
+	</Layout>
+
+	)
+
+
+	Index.getInitialProps = async e =>{
+
+	// return	await axios.get(`http://localhost:8012/My_Projects/react/shopping-mall/public/api/v4/api.php?what=FETCH_FEATURED_PRODUCTS`).then(e=>{
+	// 		return e.data
+	// 	}).catch(e=>{
+	// 		return e
+	// 	})
+	
+	return [{"id":38,"product_title":"Tommy Hilfiger","product_brand":"Tommy Hilfiger","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fugit labore delectus odio nisi eaque non, sunt, rerum nobis officia beatae deleniti veniam quos ipsum corrupti expedita sequi reprehenderit pariatur.","product_id":"35322","category":5,"priceTag":10999,"thumbnail":"tommy_watch_1.webp","thumb_1":"tommy_watch_1_p1.webp","thumb_2":"tommy_watch_1_p2.webp","thumb_3":"tommy_watch_1_p3.webp","tag":"Tommy Hilfiger","timestamp":"2020-09-01 22:40:30","stock":12,"cartThumb":"tommy_watch_1_72x72.png","overall_rating":5,"rating_in_ceil":5,"total_users_reacted":1},{"id":37,"product_title":"Tommy Hilfiger","product_brand":"Tommy Hilfiger","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fugit labore delectus odio nisi eaque non, sunt, rerum nobis officia beatae deleniti veniam quos ipsum corrupti expedita sequi reprehenderit pariatur.","product_id":"3532214","category":5,"priceTag":10999,"thumbnail":"tommy_watch_1.webp","thumb_1":"tommy_watch_1_p1.webp","thumb_2":"tommy_watch_1_p2.webp","thumb_3":"tommy_watch_1_p3.webp","tag":"Watch","timestamp":"2020-09-01 22:40:30","stock":1,"cartThumb":"tommy_watch_1_72x72.png","overall_rating":2,"rating_in_ceil":2,"total_users_reacted":4},{"id":36,"product_title":"Tommy Hilfiger","product_brand":"Tommy Hilfiger","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fugit labore delectus odio nisi eaque non, sunt, rerum nobis officia beatae deleniti veniam quos ipsum corrupti expedita sequi reprehenderit pariatur.","product_id":"3222665","category":4,"priceTag":4550,"thumbnail":"tom_bag2.webp","thumb_1":"tom_bag2_p1.webp","thumb_2":"tom_bag2_p2.webp","thumb_3":"tom_bag2_p3.jpg","tag":"Tommy Hilfiger","timestamp":"2020-09-01 22:40:30","stock":0,"cartThumb":"tom_bag2_72x72.png","overall_rating":4.7,"rating_in_ceil":5,"total_users_reacted":3},{"id":35,"product_title":"Adidas Bag (Red)(Limited Edition)","product_brand":"Adidas","description":"adidas bag","product_id":"12823211","category":4,"priceTag":1666,"thumbnail":"add_bag_1.webp","thumb_1":"add_bag_1_p1.jpg","thumb_2":"add_bag_1_p2.jpg","thumb_3":"add_bag_1_p3.jpg","tag":"Adidas","timestamp":"2020-09-01 22:40:30","stock":3,"cartThumb":"add_bag_1_72x72.png","overall_rating":4.4,"rating_in_ceil":5,"total_users_reacted":5},{"id":34,"product_title":"Nike V18","product_brand":"Sports Shoe","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fugit labore delectus odio nisi eaque non, sunt, rerum nobis officia beatae deleniti veniam quos ipsum corrupti expedita sequi reprehenderit pariatur.","product_id":"99931","category":1,"priceTag":8200,"thumbnail":"shoe1_.jpg","thumb_1":"shoe1_p1.webp","thumb_2":"shoe1_p2.webp","thumb_3":"shoe1_p3.webp","tag":"nike","timestamp":"2021-08-30 19:35:16","stock":0,"cartThumb":"shoe1__72x72.png","overall_rating":4.6,"rating_in_ceil":5,"total_users_reacted":7},{"id":33,"product_title":"JeansXXVers","product_brand":"JeansV1 FA","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fugit labore delectus odio nisi eaque non, sunt, rerum nobis officia beatae deleniti veniam quos ipsum corrupti expedita sequi reprehenderit pariatur.","product_id":"991556931","category":3,"priceTag":4990,"thumbnail":"jeans4.webp","thumb_1":"","thumb_2":"","thumb_3":"","tag":"Who","timestamp":"2020-08-30 19:35:16","stock":4,"cartThumb":"jeans4_72x72.png","overall_rating":0,"rating_in_ceil":0,"total_users_reacted":0},{"id":32,"product_title":"JeansGAA3","product_brand":"JeansV1 FA","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fugit labore delectus odio nisi eaque non, sunt, rerum nobis officia beatae deleniti veniam quos ipsum corrupti expedita sequi reprehenderit pariatur.","product_id":"6889931","category":3,"priceTag":1990,"thumbnail":"jeans3.webp","thumb_1":"","thumb_2":"","thumb_3":"","tag":"Roadsters","timestamp":"2020-08-30 19:35:16","stock":4,"cartThumb":"jeans3_72x72.png","overall_rating":2,"rating_in_ceil":2,"total_users_reacted":1},{"id":31,"product_title":"Jeans53","product_brand":"JeansV1","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fugit labore delectus odio nisi eaque non, sunt, rerum nobis officia beatae deleniti veniam quos ipsum corrupti expedita sequi reprehenderit pariatur.","product_id":"644931","category":3,"priceTag":990,"thumbnail":"jeans2.webp","thumb_1":"","thumb_2":"","thumb_3":"","tag":"XXX","timestamp":"2020-08-30 19:35:16","stock":5,"cartThumb":"jeans2_72x72.png","overall_rating":0,"rating_in_ceil":0,"total_users_reacted":0},{"id":30,"product_title":"JeansL1","product_brand":"Jeans","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fugit labore delectus odio nisi eaque non, sunt, rerum nobis officia beatae deleniti veniam quos ipsum corrupti expedita sequi reprehenderit pariatur.","product_id":"1119","category":3,"priceTag":5990,"thumbnail":"jeans1.webp","thumb_1":"997d2f6b79619e9bd32dac77057a4ac12e17d2a0d81c4ad9d8dbdbfbbb53a6b4.png","thumb_2":"26180a9b3990852865dc46bf3ee8077803fad5a784d51ab50759b69831f78a1a.jpeg","thumb_3":"c4fcf9b0ee12d54aeefe1d0851fa6e573f9839abb08fd7b82dc275d9322e23a9.jpeg","tag":"Jeans","timestamp":"2020-08-30 19:35:16","stock":5,"cartThumb":"jeans1_72x72.png","overall_rating":0,"rating_in_ceil":0,"total_users_reacted":0},{"id":29,"product_title":"Perfume XXVers","product_brand":"Perfume V1 FA","description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fugit labore delectus odio nisi eaque non, sunt, rerum nobis officia beatae deleniti veniam quos ipsum corrupti expedita sequi reprehenderit pariatur.","product_id":"9293","category":2,"priceTag":4990,"thumbnail":"perfume4.webp","thumb_1":"","thumb_2":"","thumb_3":"","tag":"PuFFF","timestamp":"2020-08-30 19:35:16","stock":1,"cartThumb":"perfume4_72x72.png","overall_rating":0,"rating_in_ceil":0,"total_users_reacted":0}]
+
+	}
+
+export default Index
